@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.27)
 
-project(example1)
+project(exampleC)
 set(CMAKE_CXX_STANDARD 20)
 
 add_library(${CMAKE_PROJECT_NAME} STATIC lib.cpp)

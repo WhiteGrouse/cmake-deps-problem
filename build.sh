@@ -15,12 +15,12 @@ build () {
   popd
 }
 
-rm -r example1/build \
-  example2/build \
-  example3/build \
+rm -r exampleA/build \
+  exampleB/build \
+  exampleC/build \
   deps
 
 mkdir deps
-build example1 install
-build example2 install
-build example3
+build exampleC install
+build exampleB install
+build exampleA

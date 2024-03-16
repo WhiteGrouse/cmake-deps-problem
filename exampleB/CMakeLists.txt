@@ -3,18 +3,18 @@ cmake_minimum_required(VERSION 3.27)
 set(DEPS_DIR ../deps)
 list(APPEND CMAKE_PREFIX_PATH ${DEPS_DIR})
 
-project(example2)
+project(exampleB)
 set(CMAKE_CXX_STANDARD 20)
 
 add_library(${CMAKE_PROJECT_NAME} STATIC lib.cpp)
 
-find_package(example1 REQUIRED)
+find_package(exampleC REQUIRED)
 
 target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:include>)
 
-target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE example1::example1)
+target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE exampleC::exampleC)
 
 set(CMAKE_INSTALL_PREFIX ../../deps/${CMAKE_PROJECT_NAME})
 
